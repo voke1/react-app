@@ -5,6 +5,12 @@ import {Link} from 'react-router-dom';
 
 
 export default class navbar extends Component {
+    state = {
+        isOpen: false
+    };
+    handleToggle = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    };
     render() {
         return (
             <nav className="navbar">
